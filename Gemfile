@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'ruby',  '2.0.0'
 gem 'rails', '4.1.1'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.1.2'
@@ -33,6 +34,7 @@ end
 
 group :production do
   gem 'pg', '0.17.1'
+  gem 'rails_12factor', '0.0.2'
 end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
