@@ -4,15 +4,15 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #  postresql version '0.12.2'
-default: &default
-  adapter: postgresql
-  pool: 5
-  timeout: 5000
-  host: localhost
-  port: 5432
+#default: &default
+  #adapter: postgresql
+  #pool: 5
+  #timeout: 5000
+  #host: localhost
+  #port: 5432
 development:
-  <<: *default
-  database: sample_app_development
+  #<<: *default
+  database: db/development.sqlite3
   adapter: sqlite3
   pool: 5
   timeout: 5000
@@ -21,16 +21,16 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: sample_app_test
+  #<<: *default
+  database: db/test.sqlite3
   adapter: sqlite3
   pool: 5
   timeout: 5000
   
 production:
-  <<: *default
-  database: sample_app_production
-  adapter: postgresql
-  host: localhost
-  username:
+ # <<: *default
+  database: db/production.sqlite3
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
   
