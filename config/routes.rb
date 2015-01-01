@@ -2,8 +2,15 @@ Rails.application.routes.draw do
    
 
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+  
+  post '/signin',    to: 'sessions#create', :as => :signin
   
   get '/signup',     to: 'users#new'
+  
+  get '/signin',     to: 'sessions#new'
+  
+  delete '/signout',   to: 'sessions#destroy', :as => :signout
 
   get '/help',        to: 'static_pages#help', :as => :help
   

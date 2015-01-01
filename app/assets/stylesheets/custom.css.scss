@@ -1,5 +1,6 @@
 @import "bootstrap";
 
+
 /* universal */
 
 html {
@@ -102,11 +103,9 @@ footer ul li {
    float: left;
    margin-left: 10px;
 }
-@import "bootstrap";
-
-/* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+  
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -177,5 +176,21 @@ input, textarea, select, uneditable-input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+}
+
+/* forms */
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
   

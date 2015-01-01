@@ -26,7 +26,7 @@ gem 'coffee-rails', '~> 4.0.0'
 end
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 3.1.0'
 
 group :test do
   gem 'capybara', '1.1.2'
