@@ -22,7 +22,10 @@ describe User do
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
+<<<<<<< HEAD
   it { should respond_to(:remember_token) }
+=======
+>>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
   it { should respond_to(:authenticate) }
   
   it { should be_valid }
@@ -107,10 +110,14 @@ describe User do
        specify { user_for_invalid_password.should be_false }
     end
   end
+<<<<<<< HEAD
   
    describe "remember token" do
       before { @user.save }
       its(:remember_token) { should_not be_blank }
     end	  
+=======
+	  
+>>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
 	  
 end

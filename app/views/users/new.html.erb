@@ -2,7 +2,11 @@
 <h1>Sign up</h1>
 
 <div class="row">
+<<<<<<< HEAD
   <div class="col-md-6 col-md-offset-3">
+=======
+  <div class="span6 offset3">
+>>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
     <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages' %>
     
@@ -18,7 +22,11 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
       
+<<<<<<< HEAD
       <%= f.submit "Create my account", class: "btn btn-primary" %>
+=======
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+>>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
     <% end %>
   </div>
 </div>

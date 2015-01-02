@@ -103,9 +103,17 @@ footer ul li {
    float: left;
    margin-left: 10px;
 }
+<<<<<<< HEAD
 
 $grayMediumLight: #eaeaea;
   
+=======
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+>>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -177,6 +185,7 @@ input, textarea, select, uneditable-input {
   @extend .control-group;
   @extend .error;
 }
+<<<<<<< HEAD
 
 /* forms */
 
@@ -193,4 +202,6 @@ input, textarea, select, uneditable-input {
   width: auto;
   margin-left: 0;
 }
+=======
+>>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
   

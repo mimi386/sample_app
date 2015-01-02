@@ -2,9 +2,12 @@ Rails.application.routes.draw do
    
 
   resources :users
+<<<<<<< HEAD
   resources :sessions, only: [:new, :create, :destroy]
   
   post '/signin',    to: 'sessions#create', :as => :signin
+=======
+>>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
   
   get '/signup',     to: 'users#new'
   

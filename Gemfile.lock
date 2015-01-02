@@ -29,6 +29,10 @@ GEM
       tzinfo (~> 1.1)
     annotate (2.4.1.beta1)
     arel (5.0.1.20140414130214)
+<<<<<<< HEAD
+=======
+    bcrypt-ruby (3.1.2)
+>>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
     bcrypt-ruby (3.1.2-x86-mingw32)
     bootstrap-sass (2.0.0)
     builder (3.2.2)
