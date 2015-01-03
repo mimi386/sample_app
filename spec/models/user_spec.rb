@@ -22,10 +22,7 @@ describe User do
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
-<<<<<<< HEAD
   it { should respond_to(:remember_token) }
-=======
->>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
   it { should respond_to(:authenticate) }
   
   it { should be_valid }

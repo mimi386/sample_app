@@ -9,8 +9,7 @@ describe "User pages" do
 	
     it { should have_selector('h1',       text: 'Sign up')  }
     it { should have_selector('title',  text: 'Sign up') }
-<<<<<<< HEAD
-=======
+
   end
   
   describe "profile page"do
@@ -44,7 +43,7 @@ describe "User pages" do
 	  expect { click_button submit }.to change(User, :count).by(1)
         end
      end
->>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
+
   end
   
   describe "profile page"do

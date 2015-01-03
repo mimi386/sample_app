@@ -10,10 +10,7 @@
 #
 
 class User < ActiveRecord::Base
-<<<<<<< HEAD
   attr_accessor :made_token
-=======
->>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
   has_secure_password
   before_save { |user| user.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }
@@ -23,7 +20,7 @@ class User < ActiveRecord::Base
                         uniqueness:  { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
-<<<<<<< HEAD
+
   
 # Returns the hash digest of the given string
   def User.digest(string)
@@ -61,4 +58,4 @@ end
 
 =======
 end
->>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
+

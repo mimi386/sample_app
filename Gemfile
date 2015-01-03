@@ -35,10 +35,7 @@ end
 group :production do
   gem 'pg', '0.17.1'
   gem 'rails_12factor', '0.0.2'
-<<<<<<< HEAD
   gem 'unicorn', '4.8.3'
-=======
->>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
 end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
