@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   
   get '/signin',     to: 'sessions#new'
   
-  delete '/signout',   to: 'sessions#destroy', :as => :signout
+  delete '/signout',   to: 'sessions#destroy'
 
   get '/help',        to: 'static_pages#help', :as => :help
   
