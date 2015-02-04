@@ -13,7 +13,7 @@ require 'spec_helper'
 
 describe User do
   
-  before { @user = User.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar" ) }
+  before { @user = User.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar" , id: "1") }
   
   subject { @user }
   
@@ -24,8 +24,16 @@ describe User do
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
+  it { should respond_to(:admin) }
   
   it { should be_valid }
+  it { should_not be_admin }
+  
+  describe "with admin attribute set to 'true'" do
+    before { @user.toggle!(:admin) }
+
+    it { should be_admin }
+  end
   
   describe "when name is not present" do
     before { @user.name = " " }
@@ -64,7 +72,7 @@ describe User do
   
   describe "when email format is invalid" do
     it "should be invalid" do
-      addresses = %w[user@foo,com user_at_foo.org example.user@foo foo@bar_baz.com foo@bar+baz.com]
+      addresses = %w[user@foo,com user_at_foo.org example.user@foo. foo@bar_baz.com foo@bar+baz.com]
       addresses.each do | invalid_address|
 	@user.email = invalid_address
         @user.should_not be_valid
@@ -91,7 +99,7 @@ describe User do
     
     it { should_not be_valid }
   end
- 
+   
   describe "return value of authenticate method" do
     before { @user.save }
     let(:found_user) {User.find_by_email(@user.email) }
@@ -107,14 +115,11 @@ describe User do
        specify { user_for_invalid_password.should be_false }
     end
   end
-<<<<<<< HEAD
+
   
    describe "remember token" do
       before { @user.save }
       its(:remember_token) { should_not be_blank }
     end	  
-=======
-	  
->>>>>>> bc62d55e3bbb25ec6eca93219083c34fde01c617
-	  
+    
 end

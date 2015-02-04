@@ -6,11 +6,14 @@ ruby '1.9.3'
 gem 'rails', '4.1.1'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.1.2'
+gem 'faker', '1.0.1'
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 # Use sqlite3 as the database for Active Record
 
 group :development, :test do
   gem 'sqlite3', '1.3.9', :require => 'sqlite3'
-  gem 'rspec-rails', '2.9.0'
+  gem 'rspec-rails', '2.14.0'
   gem 'annotate', '~> 2.4.1.beta'
 end
 
@@ -30,6 +33,8 @@ gem 'jquery-rails', '~> 3.1.0'
 
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '1.4.0', :require => false
+  gem 'minitest'
 end
 
 group :production do
