@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
   
+  resources :microposts, only: [:create, :destroy]
+  
   post '/signin',    to: 'sessions#create', :as => :signin
 
   
